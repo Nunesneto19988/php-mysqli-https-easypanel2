@@ -6,7 +6,7 @@ services:
     container_name: nginx_proxy
     restart: always
     ports:
-      - "80:80"
+      - "8080:80"
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
@@ -47,9 +47,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: minha_base
+      MYSQL_DATABASE: painel
       MYSQL_USER: usuario
-      MYSQL_PASSWORD: senha
+      MYSQL_PASSWORD: 5824b4bddd6452f86aaf
     ports:
       - "3306:3306"
     volumes:
